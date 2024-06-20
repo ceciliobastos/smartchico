@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/MarkerCluster.css">
+        <link rel="stylesheet" type="text/css" href="css/MarkerCluster.Default.css">
+        <link rel="stylesheet" type="text/css" href="css/leaflet.css">
+        <link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.4.5.min.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.icons.min.css">
+        <link rel="stylesheet" type="text/css" href="css/smartchico.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+        <script type="text/javascript" src="js/leaflet.js"></script>
+        <script type="text/javascript" src="js/leaflet.markercluster.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+        <title>SmartChico</title>
+    </head>
+    <body>
+      <section id="mapa" data-role="page" data-title="Mapa">
+          <footer data-role="footer" data-position="fixed" data-tap-toggle="false"></footer>
+          <div role="main" class="ui-content mapView" style="display: inline;"></div>
+          <div id="menu">
+            <img class="be-btn-menu" src="css/images/btn-menu.png" alt="">
+            <h3>Mostrar:</h3>
+            <div class="ui-grid-a geoArte">
+                <label for="fArte" class="ui-block-a">GeoArte:</label>
+                <input checked data-theme="c" class="ui-block-b" data-role="flipswitch" id="fArte" data-on-text="" data-off-text="" data-wrapper-class="custom-size-flipswitch" type="checkbox">
+            </div>
+            <div class="ui-grid-a geoCult">
+                <label for="fCultura" class="ui-block-a">GeoCult:</label>
+                <input checked data-theme="c" class="ui-block-b" data-role="flipswitch" id="fCultura" data-on-text="" data-off-text="" data-wrapper-class="custom-size-flipswitch" type="checkbox">
+            </div>
+            <div class="ui-grid-a geoTur">
+                <label for="fTurismo" class="ui-block-a">GeoTur:</label>
+                <input checked data-theme="c" class="ui-block-b" data-role="flipswitch" id="fTurismo" data-on-text="" data-off-text="" data-wrapper-class="custom-size-flipswitch" type="checkbox">
+            </div>
+            <br>
+            <h3><a onclick="$.mobile.changePage('#sobre', { transition: 'slideup' } )">Sobre o App</a></h3>
+          </div>
+           <img class="be-btn-location" src="css/images/btn-location.png" alt="">
+      </section>
+
+      <section id="sobre" data-role="page" data-tile="Sobre">
+          <header data-role="header">
+              <a onclick="$.mobile.changePage('#mapa', { transition: 'slideup', referse: true } )" class="be-btn-back">&nbsp;</a>
+              <h1></h1>
+          </header>
+          <div role="main" class="ui-content">
+              <h2>Sobre o SmartChico</h2>
+              <p>
+	      Smartchico é um projeto nascido no âmago do Laboratório de Estudos de
+	      Mídia e Espaço (LEME/CNPq) da Universidade do Estado da Bahia (UNEB),
+	      que tem como objetivo principal disseminar a cultura do Vale do São
+	      Francisco pela internet. Produzida através do projeto de pesquisa
+	      “Cartografia Urbanográfica do Sertão do São Francisco - Lab.C.A.U.S.”
+	      (PPGESA/UNEB), esta aplicação permite localizar elementos ligados à
+	      urbanografia e turismo em cinco cidades na região dos Territórios de
+	      Identidade do Sertão do São Francisco – Juazeiro, Casa Nova, Remanso,
+	      Curaçá e Sobradinho. As ações foram realizadas com recursos do
+	      Departamento de Ciências Humanas – III da Universidade do Estado da
+	      Bahia (DCH III UNEB) e pela Fundação de Amparo à Pesquisa do Estado
+	      da Bahia (FAPESB).
+	      </p>
+	      <h2>Créditos</h2>
+              <p>
+	      A equipe é formada por pesquisadores doutores, mestres e de iniciação
+	      científica do Departamento de Ciências Humanas – III da Universidade
+	      do Estado da Bahia (DCH III UNEB), em parceria com o Instituto Federal
+	      da Bahia (IFBA):
+	      </p>
+	      <h3>Coordenação</h3>
+	      <ul>
+		      <li>Luiz Adolfo Andrade (UNEB);</li>
+		      <li>Cecílio Ricardo Bastos (UNEB).</li>
+	      </ul>
+	      <h3>Design e desenvolvimento</h3>
+	      <ul>
+		      <li>Luiz Adolfo Andrade (UNEB);</li>
+		      <li>Cecílio Ricardo Bastos (UNEB);</li>
+		      <li>Ubirajara Lima Júnior (IFBA);</li>
+		      <li>Mônica Farias (IFBA);</li>
+		      <li>Andressa Silva (IC/UNEB);</li>
+		      <li>Ingryd Hayara (IC/FAPESB/UNEB);</li>
+		      <li>Livia Santos (IC/FAPESB/UNEB);</li>
+	      </ul>
+	      <h3>Desenvolvimento de software</h3>
+	      <ul>
+		      <li>Washington Luiz Santos Azevedo (BigEyes.Solutions);</li>
+		      <li>Laudivan Freire de Almeida (BigEyes.Solutions).</li>
+	      </ul>
+              <h2>Código fonte</h2>
+              <p>
+                Este é aplicativo é um software livre licenciado sob a GPLv3, e seu
+                código fonte está disponível no GitHub e pode ser encontrado neste
+                endereço: <a href="https://github.com/bigeyessolution/SmartChico">
+                https://github.com/bigeyessolution/SmartChico</a>.
+              </p>
+              <h2>Licenças de softwares e serviços</h2>
+              <p>
+                Este aplicativo foi desenvolvido com base nos seguintes software
+                livres e serviços:
+              </p>
+              <ul>
+                <li>Inkscape;</li>
+                <li>Gimp;</li>
+                <li>Atom;</li>
+                <li>Apache Cordova;</li>
+                <li>JQuery;</li>
+                <li>JQueryMobile;</li>
+                <li>LeafLetJS;</li>
+                <li>LeafLetJS.MarkerCluster;</li>
+                <li>GitHub.com;</li>
+                <li>MapBox.com;</li>
+                <li>OpenStreetMap.</li>
+              </ul>
+          </div>
+      </section>
+
+      <script type="text/javascript" src="cordova.js"></script>
+      <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

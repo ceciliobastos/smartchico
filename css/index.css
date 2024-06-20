@@ -1,0 +1,223 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+@font-face {
+	font-family: 'San_Francisco';
+	src: url('fonts/SanFrancisco.eot');
+	src: local('☺'), url('fonts/SanFrancisco.woff') format('woff'), url('fonts/SanFrancisco.ttf') format('truetype'), url('fonts/SanFrancisco.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html, body, section, .ui-page, #mapa .ui-content, #mapLocal {
+  padding: 0!important;
+  margin: 0 !important;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, h7, a, p, span{
+	font-family: 'San_Francisco',Sans-Serif !important;
+}
+
+#sobre p {
+  text-align: justify;
+}
+
+#menu {
+	-webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#menu > div, #menu h3 {
+	visibility: hidden;
+}
+
+#menu.opened-menu > div, #menu.opened-menu h3 {
+	visibility: visible;
+	display: block;
+}
+
+#menu label {
+	padding-top: 0.8rem;
+	padding-left: 0.8rem;
+}
+
+#menu h3 a {
+	text-decoration: none;
+	color: #8f9bb3;
+}
+
+#menu div.ui-flipswitch {
+	border-width: 0.5px !important;
+	border-radius: 15px !important;
+}
+
+#menu a.ui-flipswitch-on {
+	box-shadow: none !important;
+	border-radius: 50% !important;
+	border-width: 0.5px !important;
+}
+
+#menu .ui-shadow {
+	text-shadow: none !important;
+}
+
+.opened-menu {
+	background-color: #ffffff;
+	width: 13rem;
+	border-radius: 0.5rem;
+
+	position: fixed;
+	top: 0.9rem;
+	left: 1rem;
+	padding: 1rem;
+}
+
+.be-btn-menu {
+	-webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+#menu.opened-menu > .be-btn-menu {
+	transform: rotate(90deg);
+	left: 13.4rem;
+}
+
+#menu > .be-btn-menu {
+	height: 2.5rem;
+	position: fixed;
+	top: 1rem;
+	left: 1rem;
+}
+.ui-header, .ui-footer {
+	background: url('images/footer.png') center no-repeat;
+	background-size: contain;
+	border: none!important;
+}
+
+.be-btn-back {
+	background: url('images/btn-back.png') center no-repeat;
+	background-size: contain;
+	border: none !important;
+	background-color: transparent !important;
+}
+
+.be-btn-location{
+	height: 2.5rem;
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+}
+
+.leaflet-pane {
+	z-index: 0 !important;
+}
+
+.leaflet-container .leaflet-control-attribution {
+	background: none;
+	bottom: 2.7rem;
+}
+
+.leaflet-popup {
+}
+
+.leaflet-popup-content-wrapper {
+	padding: 0.5rem !important;
+	border-radius: 0.4rem !important;
+}
+
+.leaflet-popup-close-button {
+	margin-left: -5px !important;
+	font-size: 2rem !important;
+}
+
+.marker-cluster-small div {
+	background-color: #f2d421 !important;
+}
+
+.marker-cluster-medium div {
+	background-color: #e3a01e !important;
+}
+
+.marker-cluster-big div {
+	background-color: #7c8aa5 !important;
+}
+
+.marker-cluster-large,.marker-cluster-huge div {
+	background-color: #ffffff;
+}
+
+.leaflet-control-attribution { visibility: hidden; }
+
+.geoArte .ui-flipswitch-active{
+	background-color: #fbd117 !important;
+	border: none !important;
+}
+
+.geoCult .ui-flipswitch-active{
+	background-color: #f36327 !important;
+	border: none !important;
+}
+
+.geoTur .ui-flipswitch-active{
+	background-color: #47c2ce !important;
+	border: none !important;
+}
+
+.leaflet-marker-icon{
+	height: 48px !important;
+	width: 30px !important;
+}
+
+.leaflet-popup-content h3 {
+	text-align: center;
+}
+
+.leaflet-popup-content p,
+.leaflet-popup-content h3{
+	margin-top: 0.2rem;
+	margin-bottom: 0.2rem;
+}
+
+/* Criando tabbar */
+.tabContent:not(.activedTab){
+	visibility: hidden;
+  height: 0;
+}
+
+.tabContent.activedTab {
+  visibility: visible;
+}
+
+.tabbar {
+	display: block;
+	border-bottom: 2px solid #d8cabc;
+}
+
+.tabbar button {
+	background-color: #e8e0d8;
+	color: #939393;
+	border: none;
+	margin: 0 0 0 0.2rem;
+	padding: 0.5rem 0.8rem;
+}
+
+.tabbar button:hover, .tabbar button:active {
+	background-color: #e7dfd6;
+}
+
+.tabbar button.activedTab {
+	background-color: #d8cabc;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+div.activedTab {
+
+}
